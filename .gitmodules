@@ -7,3 +7,6 @@
 [submodule ".vim/bundle/TaskVim"]
 	path = .vim/bundle/TaskVim
 	url = git://github.com/joseluisdgz/TaskVim.git
+[submodule ".vim/bundle/Powerline"]
+	path = .vim/bundle/Powerline
+	url = git://github.com/Lokaltog/vim-powerline.git
