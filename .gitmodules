@@ -4,3 +4,6 @@
 [submodule ".vim/bundle/quicktask"]
 	path = .vim/bundle/quicktask
 	url = git://github.com/aaronbieber/quicktask.git
+[submodule ".vim/bundle/TaskVim"]
+	path = .vim/bundle/TaskVim
+	url = git://github.com/joseluisdgz/TaskVim.git
