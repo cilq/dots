@@ -1,6 +1,45 @@
 {
+	// "color_scheme": "Packages/Smyck Color Scheme/hukl.tmTheme",
+	"drag_text": false,
+	"folder_exclude_patterns":
+	[
+		".svn",
+		".git",
+		".hg",
+		"CVS"
+	],
+	"font_face": "Bitstream Vera Sans Mono",
+	"font_size": 9,
+	"highlight_line": true,
 	"ignored_packages":
 	[
-		"Vintage"
-	]
+		"Vintage",
+		"HTML-CSS-JS Prettify"
+	],
+	"phoenix_blur_current_tab": true,
+	"phoenix_color_blue": false,
+	"phoenix_color_expanded_folder": true,
+	"phoenix_color_green": true,
+	"phoenix_color_orange": false,
+	"phoenix_color_pink": false,
+	"phoenix_color_red": false,
+	"phoenix_color_yellow": false,
+	"phoenix_dirty_bottom_bar": true,
+	"phoenix_dirty_bottom_bar_blue": false,
+	"phoenix_dirty_bottom_bar_green": true,
+	"phoenix_dirty_bottom_bar_orange": false,
+	"phoenix_dirty_bottom_bar_pink": false,
+	"phoenix_dirty_bottom_bar_red": false,
+	"phoenix_dirty_bottom_bar_yellow": false,
+	"phoenix_highlight_current_tab": true,
+	"phoenix_solid_current_tab": true,
+	"phoenix_tabs_auto_width": false,
+	"phoenix_tabs_large": false,
+	"phoenix_tabs_medium": true,
+	"phoenix_tabs_normal": false,
+	"phoenix_tabs_small": false,
+	"phoenix_tabs_xlarge": false,
+	"show_encoding": true,
+	"show_line_endings": true
+	// "theme": "Phoenix Dark.sublime-theme"
 }
