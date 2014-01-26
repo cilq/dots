@@ -1,0 +1,15 @@
+{
+	"rulers":
+	[
+		78,
+		80
+	],
+	"trim_trailing_white_space_on_save": true,
+	"ensure_newline_at_eof_on_save": true,
+	"shift_tab_unindent": false,
+	"translate_tabs_to_spaces": true,
+	"use_tab_stops": true,
+	"tab_size": 4,
+	"detect_indentation": false,
+	"word_wrap": false
+}
