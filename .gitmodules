@@ -10,3 +10,6 @@
 [submodule ".vim/bundle/Powerline"]
 	path = .vim/bundle/Powerline
 	url = git://github.com/Lokaltog/vim-powerline.git
+[submodule "sublime-text-3/Installed Packages/Smyck-Color-Scheme"]
+	path = sublime-text-3/Installed Packages/Smyck-Color-Scheme
+	url = git@github.com:cilq/Smyck-Color-Scheme
