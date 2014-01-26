@@ -1,6 +1,13 @@
 {
 	"installed_packages":
 	[
+		"Alignment",
+		"HexViewer",
+		"HTML Mustache",
+		"HTML-CSS-JS Prettify",
+		"JsFormat",
+		"Pretty JSON",
+		"StringEncode",
 		"Theme - Phoenix"
 	]
 }
