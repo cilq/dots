@@ -1,5 +1,5 @@
 {
-	// "color_scheme": "Packages/Smyck Color Scheme/hukl.tmTheme",
+	"color_scheme": "Packages/Smyck Color Scheme/Smyck.tmTheme",
 	"drag_text": false,
 	"folder_exclude_patterns":
 	[
@@ -13,8 +13,8 @@
 	"highlight_line": true,
 	"ignored_packages":
 	[
-		"Vintage",
-		"HTML-CSS-JS Prettify"
+		"HTML-CSS-JS Prettify",
+		"Vintage"
 	],
 	"phoenix_blur_current_tab": true,
 	"phoenix_color_blue": false,
@@ -40,6 +40,6 @@
 	"phoenix_tabs_small": false,
 	"phoenix_tabs_xlarge": false,
 	"show_encoding": true,
-	"show_line_endings": true
-	// "theme": "Phoenix Dark.sublime-theme"
+	"show_line_endings": true,
+	"theme": "Phoenix Dark.sublime-theme"
 }
