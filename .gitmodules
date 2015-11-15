@@ -13,3 +13,6 @@
 [submodule "sublime-text-3/Installed Packages/Smyck-Color-Scheme"]
 	path = sublime-text-3/Installed Packages/Smyck-Color-Scheme
 	url = git@github.com:cilq/Smyck-Color-Scheme
+[submodule "dotbot"]
+	path = dotbot
+	url = https://github.com/anishathalye/dotbot
