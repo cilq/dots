@@ -17,14 +17,17 @@ Vagrant.configure(2) do |config|
     ubuntu.vm.box = "ubuntu/wily64"
     ubuntu.vm.network "forwarded_port", guest: 8080, host: 8080
     ubuntu.vm.network "forwarded_port", guest: 8443, host: 8443
-    ubuntu.vm.network "forwarded_port", guest: 3306, host: 3306
+    # ubuntu.vm.network "forwarded_port", guest: 3306, host: 3306
     ubuntu.vm.network "forwarded_port", guest: 2375, host: 2375
     ubuntu.vm.provider "virtualbox" do |v|
       v.memory = 2048
       # v.customize ["modifyvm", :id, "--cpuexecutioncap", "50"]
-      v.customize ["storageattach", :id, "--storagectl", "SATAController", "--medium", "180fbc2d-045c-409d-a803-5a4fbc09453c", "--port", "1", "--type", "hdd"]
+      # v.customize ["storageattach", :id, "--storagectl", "SATAController", "--medium", "180fbc2d-045c-409d-a803-5a4fbc09453c", "--port", "1", "--type", "hdd"]
     end
     ubuntu.vm.provision "shell", inline: <<-SHELL
+      # echo "export http_proxy=http://proxy.clondiag.jena:8080 >> ~/.bashrc"
+      # echo "export https_proxy=http://proxy.clondiag.jena:8080 >> ~/.bashrc"
+      # echo "export ftp_proxy=http://proxy.clondiag.jena:8080 >> ~/.bashrc"
       echo "####################"
       echo "###### Docker ######"
       echo "####################"
@@ -92,14 +95,15 @@ Vagrant.configure(2) do |config|
   config.vm.define "mariadb" do |mariadb|
     
     mariadb.vm.provider "docker" do |d|
-      d.image = "mariadb:latest"
+      d.image = "bitnami/mariadb"
       d.vagrant_vagrantfile = "Vagrantfile"
       d.vagrant_machine = "ubuntu"
       d.create_args = ["--detach"]
       d.ports = ["3306:3306"]
       d.name = "mariadb"
       d.has_ssh = true
-      d.env = {MYSQL_ROOT_PASSWORD: "einfach"}
+      d.env = {MARIADB_PASSWORD: "einfach"}
+      d.volumes = ["/srv/mariadb/config:/bitnami/mariadb/conf", "/srv/mariadb/logs:/bitnami/mariadb/logs", "/srv/mariadb/data:/bitnami/mariadb/data"]
     end
   end
 
@@ -119,6 +123,25 @@ Vagrant.configure(2) do |config|
 
   config.vm.define "docker" do |d|
     d.vm.box = "dduportal/boot2docker"
+    d.vm.network "forwarded_port", guest: 2377, host: 2377
+  end
+
+  config.vm.define "registry" do |r|
+    r.vm.network "forwarded_port", guest: 5000, host: 5000
+    r.vm.provider "docker" do |d|
+      d.image = "registry:2"
+      d.vagrant_vagrantfile = "Vagrantfile"
+      d.vagrant_machine = "docker"
+      d.create_args = ["--detach"]
+      d.ports = ["5000:5000"]
+      d.name = "registry"
+      d.volumes = ["/svr/registry:/var/lib/registry"]
+
+    end
+  end
+
+  config.vm.define "windows" do |w|
+    w.vm.box = "modernIE/w10-edge"
   end
 
   # Disable automatic box update checking. If you disable this, then
