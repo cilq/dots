@@ -1,14 +1,14 @@
 [submodule ".vim/bundle/fugitive"]
-	path = .vim/bundle/fugitive
+	path = vim/bundle/fugitive
 	url = git://github.com/tpope/vim-fugitive.git
 [submodule ".vim/bundle/quicktask"]
-	path = .vim/bundle/quicktask
+	path = vim/bundle/quicktask
 	url = git://github.com/aaronbieber/quicktask.git
 [submodule ".vim/bundle/TaskVim"]
-	path = .vim/bundle/TaskVim
+	path = vim/bundle/TaskVim
 	url = git://github.com/joseluisdgz/TaskVim.git
 [submodule ".vim/bundle/Powerline"]
-	path = .vim/bundle/Powerline
+	path = vim/bundle/Powerline
 	url = git://github.com/Lokaltog/vim-powerline.git
 [submodule "sublime-text-3/Installed Packages/Smyck-Color-Scheme"]
 	path = sublime-text-3/Installed Packages/Smyck-Color-Scheme

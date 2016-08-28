@@ -1,9 +1,14 @@
 - clean: ['~']
 
 - link:
-    ~/.dotfiles: ''
-    ~/.zsh: .zsh
-    ~/.zshrc: .zshrc
+    ~/.zsh: zsh
+    ~/.zshrc: zshrc
+    ~/.bashrc: bashrc
+    ~/.vim: vim
+    ~/.vimrc: vimrc
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
+    - ["if [ ! -d ../.dotfiles-local ]; then git clone -b `uname` git@github.com:cilq/dotfiles-local.git ../.dotfiles-local; fi", Cloning local dotfiles]
+    - [cd ../.dotfiles-local; git submodule update --init --recursive, Installing submodules for local dotfiles]
+    - [dotbot/bin/dotbot -d ../.dotfiles-local -c ../.dotfiles-local/install.conf.yaml, Installing local dotfiles]
