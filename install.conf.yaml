@@ -6,6 +6,7 @@
     ~/.bashrc: bashrc
     ~/.vim: vim
     ~/.vimrc: vimrc
+    ~/.Xresources: Xresources
     ~/.config/awesome:
       create: true
       path: config/awesome
