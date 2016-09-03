@@ -16,3 +16,9 @@
 [submodule "dotbot"]
 	path = dotbot
 	url = https://github.com/anishathalye/dotbot
+[submodule ".references/awesome-copycats"]
+	path = .references/awesome-copycats
+	url = https://github.com/copycat-killer/awesome-copycats.git
+[submodule ".references/copycat-killer"]
+	path = .references/copycat-killer
+	url = https://github.com/copycat-killer/dots.git
